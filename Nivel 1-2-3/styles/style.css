@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+html, body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+}
+
+.container .rating input{
+    display:none;
+}
+
+.rating label{
+    padding: 20px;
+    font-size:50px;
+    color: rgb(192, 51, 192);
+    float: right;
+}
+
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+ color: red;
+}
+
+input:checked ~ label{
+    color: red;
+}
+
